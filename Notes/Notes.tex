@@ -1,0 +1,48 @@
+\input{header.tex}
+\usepackage{amssymb}
+\usepackage{listings}
+\author{}
+\begin{document}
+\section{Euler Method}
+\begin{equation}
+ih\frac{d\ket{\psi}}{dt} = H\ket{\psi}
+\end{equation}
+$\Longrightarrow$
+\begin{equation}
+ih\frac{\ket{\psi(t_{k+1})}-\ket{\psi(t_{k})}}{\vartriangle{t}} = H\ket{\psi(t_{k})}
+\end{equation}
+$\Longrightarrow$
+\begin{equation}
+\ket{\psi(t_{k+1})}-\ket{\psi(t_{k})} = -iH\ket{\psi(t_{k})}\vartriangle{t}
+\end{equation}
+$\Longrightarrow$
+\begin{equation}
+\ket{\psi(t_{k+1})} = (\mathbb{I}-iH\vartriangle{t})\ket{\psi(t_{k})}
+\end{equation}
+
+\paragraph{For code refer to Notebook}
+
+\section{Crank Nicolson method}
+\begin{equation}
+\ket{\psi(t_{k+1})}-\ket{\psi(t_{k+1/2})} = -iH\ket{\psi(t_{k+1/2})}\vartriangle{t}/2
+\end{equation}
+and
+\begin{equation}
+\ket{\psi(t_{k+1/2})}-\ket{\psi(t_{k})} = -iH\ket{\psi(t_{k+1/2})}\vartriangle{t}/2
+\end{equation}
+From (5)
+\begin{equation}
+\ket{\psi(t_{k+1})} = (\mathbb{I}-iH\vartriangle{t}/2)\ket{\psi(t_{k+1/2})}
+\end{equation}
+From (6)
+\begin{equation}
+\ket{\psi(t_{k})} = (\mathbb{I}+iH\vartriangle{t}/2)\ket{\psi(t_{k+1/2})}
+\end{equation}
+$\Longrightarrow$
+\begin{equation}
+[\mathbb{I}+\frac{iH\vartriangle{t}}{2}]\ket{\psi(t_{k+1})} = [\mathbb{I}-\frac{iH\vartriangle{t}}{2}]\ket{\psi(t_{k})}
+\end{equation}
+
+\paragraph{For code refer to Notebook}
+
+\end{document}
