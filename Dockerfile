@@ -26,7 +26,7 @@ ENV USER main
 WORKDIR $HOME
 
 # Add helper scripts
-ADD handle-requirements.py /home/main/
+# ADD handle-requirements.py /home/main/
 ADD start-notebook.sh /home/main/
 ADD templates/ /srv/templates/
 
