@@ -27,12 +27,12 @@ WORKDIR $HOME
 
 # Add helper scripts
 # ADD handle-requirements.py /home/main/
-ADD start-notebook.sh /home/main/
-ADD templates/ /srv/templates/
+# ADD start-notebook.sh /home/main/
+# ADD templates/ /srv/templates/
 
-USER root
-RUN chmod a+rX /srv/templates
-RUN chown -R main:main /home/main
+# USER root
+# RUN chmod a+rX /srv/templates
+# RUN chown -R main:main /home/main
 
 USER main
 
