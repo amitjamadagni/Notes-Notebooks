@@ -5,6 +5,8 @@ MAINTAINER Andrew Osheroff <andrewosh@gmail.com>
 USER root
 
 # Add Julia dependencies
+RUN apt-get install software-properties-common
+RUN apt-get update
 RUN add-apt-repository ppa:staticfloat/juliareleases
 RUN add-apt-repository ppa:staticfloat/julia-deps
 RUN apt-get update
