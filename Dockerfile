@@ -23,7 +23,7 @@ RUN apt-get update \
     libreadline-dev \
     libncurses-dev \
     libpcre3-dev \
-    libgnutls28 \
+    # libgnutls28 \
     libzmq3-dev \
     libzmq3 \
     libnettle4 \
