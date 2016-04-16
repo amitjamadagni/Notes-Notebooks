@@ -15,7 +15,7 @@ RUN apt-get update -y &&\
 
 # We run our docker images with a non-root user as a security precaution.
 # main is our user
-RUN useradd -m -s /bin/bash main
+# RUN useradd -m -s /bin/bash main
 
 EXPOSE 8888
 
