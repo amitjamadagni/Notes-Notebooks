@@ -5,9 +5,9 @@ MAINTAINER Andrew Osheroff <andrewosh@gmail.com>
 USER root
 
 # Add Julia dependencies
-RUN apt-get install software-properties-common
-RUN apt-get install python-software-properties
+# RUN apt-get install software-properties-common
 RUN apt-get update
+RUN apt-get install python-software-properties
 RUN add-apt-repository ppa:staticfloat/juliareleases
 RUN add-apt-repository ppa:staticfloat/julia-deps
 RUN apt-get update
