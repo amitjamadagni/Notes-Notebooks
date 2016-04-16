@@ -42,7 +42,8 @@ RUN apt-get update \
     python-pip \
     && apt-get clean
 
-RUN pip install --upgrade pyzmq PyDrive google-api-python-client jsonpointer jsonschema tornado sphinx pygments nose readline mistune invoke numpy scipy cython matplotlib qutip
+# RUN pip install --upgrade pyzmq PyDrive google-api-python-client jsonpointer jsonschema tornado sphinx pygments nose readline mistune invoke numpy scipy cython matplotlib qutip
+RUN pip install --upgrade pyzmq PyDrive google-api-python-client jsonpointer tornado nose readline mistune invoke numpy scipy cython matplotlib qutip
 
 RUN git clone --recursive --branch 3.x https://github.com/ipython/ipython.git; cd ipython; python setup.py install; cd ..; rm -rf ipython
 
