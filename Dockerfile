@@ -15,5 +15,5 @@ USER main
 # Install Julia kernel
 RUN julia -e 'Pkg.add("IJulia")'
 RUN julia -e 'Pkg.add("PyPlot")'
-RUN julia -e 'Pkg.clone("https://github.com/JuliaQuantum/QuDynamics.jl")'
-RUN julia -e 'Pkg.add("Gadfly")' 
+RUN julia -e 'Pkg.clone("https://github.com/JuliaQuantum/QuDynamics.jl.git")'
+RUN julia -e 'Pkg.add("Gadfly")'
