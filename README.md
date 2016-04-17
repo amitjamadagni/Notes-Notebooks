@@ -1,4 +1,7 @@
 # Notes-Notebooks
+
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/amitjamadagni/Notes-Notebooks)
+
 Notes for GSoC 2015 Project and related code snippets via Notebooks.
 
 Notes would mainly contain the proofs and implications of the main Notes being developed.
